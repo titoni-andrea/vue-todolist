@@ -14,7 +14,12 @@ createApp({
             console.log(this.todos)
             this.newItem = ""
 
-        }
+        },
+
+        removeTodo(i) {
+            this.todos.splice(i, 1)
+            console.log(this.todos)
+        },
     },
 
     mounted() {
