@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue Todo list</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <div id="app">
+
+        <label for="name"><strong>Cose da fare</strong></label>
+        <input type="text" name="name" placeholder="Es: Pulire la macchina" v-model="newItem" />
+        <button @click="insertTodo(newItem)">INVIA</button>
+
         <ul>
-            <li v-for="todo in todos">{{todo}}</li>
+            <li v-for="todo,i in todos">{{todo}}</li>
         </ul>
     </div>
-    
+
 
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

@@ -4,17 +4,17 @@ createApp({
     data() {
         return {
            todos: [
-            "Pippo",
-            "Mauro",
-            "Giovanni",
-            "Sandro",
-            "Anna",
-            "Sara",
-           ]
+           ],
+           newItem: ""
         }
     },
     methods: {
+        insertTodo() {
+            this.todos.push(this.newItem)
+            console.log(this.todos)
+            this.newItem = ""
 
+        }
     },
 
     mounted() {
