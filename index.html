@@ -20,7 +20,7 @@
         <button @click="insertTodo(newItem)">INVIA</button>
 
         <ul>
-            <div v-for="todo,i in todos">
+            <div class="c-flex" v-for="todo,i in todos">
                 <li>{{todo}}</li>
                 <span @click="removeTodo(i)"><i class="fa-solid fa-xmark"></i></span>
             </div>
